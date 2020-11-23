@@ -1,8 +1,3 @@
 #!/bin/bash
-result=0
-echo "Count params $#"
-for param in "$@"
-do
-let "result = result + param"
-done
-echo "$(($result/$#))"
+res=0;
+while read -r i; do [[ $i == [0-1000]* ]] && echo $((i*i)); done < number.txt
